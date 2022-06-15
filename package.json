@@ -1,7 +1,23 @@
 {
   "name": "next-template",
   "version": "0.1.0",
-  "private": true,
+  "description": "",
+  "keywords": [
+    "nextjs",
+    "tailwindcss",
+    "template",
+    "react-query"
+  ],
+  "homepage": "https://github.com/xg4/next-template#readme",
+  "bugs": {
+    "url": "https://github.com/xg4/next-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xg4/next-template.git"
+  },
+  "license": "MIT",
+  "author": "xg4 <xingor4@gmail.com>",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -17,7 +33,10 @@
     ]
   },
   "dependencies": {
+    "classnames": "2.3.1",
     "dayjs": "1.11.3",
+    "ky": "0.30.0",
+    "ky-universal": "0.10.1",
     "lodash": "4.17.21",
     "next": "12.1.6",
     "react": "18.2.0",
