@@ -1,12 +1,12 @@
 import NavLayout from '../layouts/NavLayout'
 import { NextPageWithLayout } from './_app'
 
-const Home: NextPageWithLayout = () => {
-  return <div>Home</div>
+const About: NextPageWithLayout = () => {
+  return <div>About</div>
 }
 
-Home.getLayout = (page) => {
+About.getLayout = (page) => {
   return <NavLayout>{page}</NavLayout>
 }
 
-export default Home
+export default About
