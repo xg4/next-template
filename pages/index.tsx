@@ -1,4 +1,4 @@
-import NavLayout from '../layouts/NavLayout'
+import NavLayout from '../components/NavLayout'
 import { NextPageWithLayout } from './_app'
 
 const Home: NextPageWithLayout = () => {

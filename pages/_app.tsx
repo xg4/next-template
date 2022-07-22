@@ -1,11 +1,11 @@
-import { NextPage } from 'next'
-import type { AppProps } from 'next/app'
-import { ReactElement, ReactNode, useState } from 'react'
 import {
   Hydrate,
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import { NextPage } from 'next'
+import type { AppProps } from 'next/app'
+import { ReactElement, ReactNode, useState } from 'react'
 import '../styles/tailwind.css'
 
 export type NextPageWithLayout = NextPage & {
