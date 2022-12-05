@@ -1,29 +1,15 @@
-import {
-  Hydrate,
-  QueryClient,
-  QueryClientProvider,
-} from '@tanstack/react-query'
-import { NextPage } from 'next'
+import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import type { AppProps } from 'next/app'
-import { ReactElement, ReactNode, useState } from 'react'
+import { useState } from 'react'
 import '../styles/tailwind.css'
 
-export type NextPageWithLayout = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode
-}
-
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout
-}
-
-export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(() => new QueryClient())
 
-  const getLayout = Component.getLayout ?? ((page) => page)
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        {getLayout(<Component {...pageProps} />)}
+        <Component {...pageProps} />
       </Hydrate>
     </QueryClientProvider>
   )
