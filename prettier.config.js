@@ -1,8 +1,4 @@
 module.exports = {
-  printWidth: 120,
-  semi: false,
-  singleQuote: true,
-  trailingComma: 'es5',
-  arrowParens: 'avoid',
+  ...require('@xg4/prettier-config'),
   plugins: [require('prettier-plugin-tailwindcss')],
 }
